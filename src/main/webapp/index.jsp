@@ -60,7 +60,7 @@ button:hover {
 <body>
 
 <header>
-    <h1>My Shopping App</h1>
+    <h1>Shopping App</h1>
 </header>
 
 <section class="products">
