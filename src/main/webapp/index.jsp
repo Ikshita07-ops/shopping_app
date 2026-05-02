@@ -1,116 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MiniShop</title>
+  <meta charset="UTF-8">
+  <title>My Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f5f5;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-/* Navbar */
-nav {
-    background: #111;
-    color: white;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-}
+    body {
+      background: #f5f7fa;
+      color: #333;
+    }
 
-.cart {
-    background: red;
-    padding: 5px 10px;
-    border-radius: 20px;
-}
+    header {
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
 
-/* Products */
-.products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-    gap: 20px;
-}
+    header h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
 
-.card {
-    background: white;
-    padding: 15px;
-    width: 200px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-}
+    header p {
+      font-size: 18px;
+    }
 
-.card img {
-    width: 100%;
-    border-radius: 10px;
-}
+    nav {
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
 
-.price {
-    color: green;
-    font-weight: bold;
-}
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
 
-button {
-    margin-top: 10px;
-    padding: 8px;
-    width: 100%;
-    border: none;
-    background: black;
-    color: white;
-    cursor: pointer;
-}
+    nav a:hover {
+      color: #4facfe;
+    }
 
-button:hover {
-    background: #333;
-}
-</style>
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
 
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #4facfe;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #4facfe;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
 </head>
+
 <body>
 
-<nav>
-    <h2>MiniShop</h2>
-    <div>Cart: <span id="cart-count" class="cart">0</span></div>
-</nav>
+  <header>
+    <h1>My Project</h1>
+    <p>A Simple & Modern Web Project</p>
+  </header>
 
-<section class="products">
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Features</a>
+    <a href="#">Contact</a>
+  </nav>
 
-    <div class="card">
-        <img src="https://via.placeholder.com/200">
-        <h3>Jacket</h3>
-        <p class="price">₹1999</p>
-        <button onclick="addToCart()">Add to Cart</button>
+  <section>
+    <h2>About Project</h2>
+    <p style="text-align:center;">
+      This project demonstrates a clean UI design using HTML and CSS.
+      It is responsive, modern, and suitable for beginner to intermediate developers.
+    </p>
+  </section>
+
+  <section>
+    <h2>Features</h2>
+
+    <div class="card-container">
+      <div class="card">
+        <h3>Responsive Design</h3>
+        <p>Works smoothly on mobile, tablet, and desktop.</p>
+      </div>
+
+      <div class="card">
+        <h3>Modern UI</h3>
+        <p>Clean layout with smooth hover effects.</p>
+      </div>
+
+      <div class="card">
+        <h3>Easy to Use</h3>
+        <p>Simple structure for beginners.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-        <img src="https://via.placeholder.com/200">
-        <h3>Camera</h3>
-        <p class="price">₹25,000</p>
-        <button onclick="addToCart()">Add to Cart</button>
-    </div>
+  <section style="text-align:center;">
+    <h2>Get Started</h2>
+    <p>Click below to explore the project.</p>
+    <a href="#" class="btn">View Project</a>
+  </section>
 
-    <div class="card">
-        <img src="https://via.placeholder.com/200">
-        <h3>Keyboard</h3>
-        <p class="price">₹899</p>
-        <button onclick="addToCart()">Add to Cart</button>
-    </div>
-
-</section>
-
-<script>
-let count = 0;
-
-function addToCart() {
-    count++;
-    document.getElementById("cart-count").innerText = count;
-}
-</script>
+  <footer>
+    <p>© 2026 My Project | Made by You</p>
+  </footer>
 
 </body>
 </html>
