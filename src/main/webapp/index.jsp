@@ -66,23 +66,22 @@ button:hover {
 <section class="products">
 
     <div class="card">
-        <img src="https://via.placeholder.com/150" alt="Product">
         <h2>Product 1</h2>
-        <p>₹499</p>
+        <p>499</p>
         <button>Add to Cart</button>
     </div>
 
     <div class="card">
-        <img src="https://via.placeholder.com/150" alt="Product">
+
         <h2>Product 2</h2>
-        <p>₹799</p>
+        <p>799</p>
         <button>Add to Cart</button>
     </div>
 
     <div class="card">
-        <img src="https://via.placeholder.com/150" alt="Product">
+
         <h2>Product 3</h2>
-        <p>₹999</p>
+        <p>999</p>
         <button>Add to Cart</button>
     </div>
 
