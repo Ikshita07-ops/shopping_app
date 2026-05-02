@@ -3,37 +3,70 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shopping App</title>
+<title>ShopEasy</title>
 
 <style>
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
-    background-color: #f4f4f4;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-header {
-    background-color: #333;
+body {
+    background: #eef2f3;
+}
+
+/* Navbar */
+nav {
+    background: #222;
     color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav h2 {
+    color: #00d4ff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    cursor: pointer;
+}
+
+/* Products */
+.container {
+    padding: 30px;
     text-align: center;
-    padding: 15px;
+}
+
+.container h1 {
+    margin-bottom: 20px;
 }
 
 .products {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
-    padding: 20px;
-    flex-wrap: wrap;
 }
 
+/* Card */
 .card {
     background: white;
     padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    width: 200px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 12px;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 .card img {
@@ -41,49 +74,91 @@ header {
     border-radius: 10px;
 }
 
+.card h3 {
+    margin: 10px 0;
+}
+
+.price {
+    color: #28a745;
+    font-weight: bold;
+}
+
 button {
-    background: #28a745;
-    color: white;
-    border: none;
-    padding: 10px;
     margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background: #00b894;
+    color: white;
+    border-radius: 6px;
     cursor: pointer;
-    border-radius: 5px;
 }
 
 button:hover {
-    background: #218838;
+    background: #019875;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
 }
 </style>
 
 </head>
 <body>
 
-<header>
-    <h1>Shopping App</h1>
-</header>
+<nav>
+    <h2>ShopEasy</h2>
+    <ul>
+        <li>Home</li>
+        <li>Products</li>
+        <li>Cart</li>
+    </ul>
+</nav>
 
-<section class="products">
+<div class="container">
+    <h1>Our Products</h1>
 
-    <div class="card">
-        <h2>Product 1</h2>
-        <p>499</p>
-        <button>Add to Cart</button>
+    <div class="products">
+
+        <div class="card">
+            <img src="https://via.placeholder.com/200" alt="">
+            <h3>Shoes</h3>
+            <p class="price">₹1499</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/200" alt="">
+            <h3>Watch</h3>
+            <p class="price">₹999</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/200" alt="">
+            <h3>Headphones</h3>
+            <p class="price">₹1999</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/200" alt="">
+            <h3>Backpack</h3>
+            <p class="price">₹799</p>
+            <button>Add to Cart</button>
+        </div>
+
     </div>
+</div>
 
-    <div class="card">
-        <h2>Product 2</h2>
-        <p>799</p>
-        <button>Add to Cart</button>
-    </div>
-
-    <div class="card">
-        <h2>Product 3</h2>
-        <p>999</p>
-        <button>Add to Cart</button>
-    </div>
-
-</section>
+<footer>
+    <p>© 2026 ShopEasy | All Rights Reserved</p>
+</footer>
 
 </body>
 </html>
