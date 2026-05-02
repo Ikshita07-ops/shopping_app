@@ -1,159 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Project</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Save Trees</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
 
-    body {
-      background: #f5f7fa;
-      color: #333;
-    }
+body{
+  background:#0f2027;
+  color:white;
+}
 
-    header {
-      background: linear-gradient(135deg, #4facfe, #00f2fe);
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
+/* HERO SECTION */
+.hero{
+  height:100vh;
+  background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)),
+  url('https://images.unsplash.com/photo-1501785888041-af3ef285b470');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
 
-    header h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
+.hero h1{
+  font-size:60px;
+  margin-bottom:15px;
+}
 
-    header p {
-      font-size: 18px;
-    }
+.hero p{
+  font-size:20px;
+  max-width:600px;
+}
 
-    nav {
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      padding: 15px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
+.btn{
+  margin-top:25px;
+  padding:12px 30px;
+  background:#00c853;
+  border:none;
+  border-radius:30px;
+  color:white;
+  text-decoration:none;
+  font-size:16px;
+  transition:0.3s;
+}
 
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-    }
+.btn:hover{
+  background:#00e676;
+}
 
-    nav a:hover {
-      color: #4facfe;
-    }
+/* SECTION */
+section{
+  padding:60px 20px;
+  max-width:1100px;
+  margin:auto;
+}
 
-    section {
-      padding: 50px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+h2{
+  text-align:center;
+  margin-bottom:30px;
+  font-size:32px;
+}
 
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #4facfe;
-    }
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
 
-    .card-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+.card{
+  background:rgba(255,255,255,0.1);
+  backdrop-filter:blur(10px);
+  padding:25px;
+  border-radius:15px;
+  transition:0.3s;
+}
 
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: 0.3s;
-    }
+.card:hover{
+  transform:translateY(-10px);
+  background:rgba(255,255,255,0.2);
+}
 
-    .card:hover {
-      transform: translateY(-5px);
-    }
+.card h3{
+  margin-bottom:10px;
+  color:#00e676;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
-      background: #4facfe;
-      color: white;
-      border-radius: 5px;
-      text-decoration: none;
-    }
+/* IMAGE SECTION */
+.image-section{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  justify-content:center;
+}
 
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-  </style>
+.image-section img{
+  width:300px;
+  border-radius:15px;
+  transition:0.3s;
+}
+
+.image-section img:hover{
+  transform:scale(1.05);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:black;
+}
+
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h1>My Project</h1>
-    <p>A Simple & Modern Web Project</p>
-  </header>
+<!-- HERO -->
+<div class="hero">
+  <h1>🌳 Save Trees</h1>
+  <p>Protect trees today for a greener tomorrow. Every tree matters for life on Earth.</p>
+  <a href="#" class="btn">Join Mission</a>
+</div>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Features</a>
-    <a href="#">Contact</a>
-  </nav>
-
-  <section>
-    <h2>About Project</h2>
-    <p style="text-align:center;">
-      This project demonstrates a clean UI design using HTML and CSS.
-      It is responsive, modern, and suitable for beginner to intermediate developers.
-    </p>
-  </section>
-
-  <section>
-    <h2>Features</h2>
-
-    <div class="card-container">
-      <div class="card">
-        <h3>Responsive Design</h3>
-        <p>Works smoothly on mobile, tablet, and desktop.</p>
-      </div>
-
-      <div class="card">
-        <h3>Modern UI</h3>
-        <p>Clean layout with smooth hover effects.</p>
-      </div>
-
-      <div class="card">
-        <h3>Easy to Use</h3>
-        <p>Simple structure for beginners.</p>
-      </div>
+<!-- IMPORTANCE -->
+<section>
+  <h2>Why Trees Matter</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>🌍 Oxygen Source</h3>
+      <p>Trees produce oxygen and keep the air clean and breathable.</p>
     </div>
-  </section>
 
-  <section style="text-align:center;">
-    <h2>Get Started</h2>
-    <p>Click below to explore the project.</p>
-    <a href="#" class="btn">View Project</a>
-  </section>
+    <div class="card">
+      <h3>🌧 Climate Balance</h3>
+      <p>They control temperature and reduce global warming.</p>
+    </div>
 
-  <footer>
-    <p>© 2026 My Project | Made by You</p>
-  </footer>
+    <div class="card">
+      <h3>🐦 Wildlife Home</h3>
+      <p>Trees provide shelter for birds and animals.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROTECTION -->
+<section>
+  <h2>How You Can Help</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>🌱 Plant Trees</h3>
+      <p>Increase green cover by planting more trees.</p>
+    </div>
+
+    <div class="card">
+      <h3>♻ Reduce Paper</h3>
+      <p>Save trees by using less paper and recycling.</p>
+    </div>
+
+    <div class="card">
+      <h3>🚫 Stop Deforestation</h3>
+      <p>Spread awareness and protect forests.</p>
+    </div>
+  </div>
+</section>
+
+<!-- IMAGES -->
+<section>
+  <h2>Nature Beauty</h2>
+  <div class="image-section">
+    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+    <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e">
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Save Trees | Designed by You 🌿</p>
+</footer>
 
 </body>
 </html>
