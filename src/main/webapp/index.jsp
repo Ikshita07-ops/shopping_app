@@ -103,7 +103,7 @@ button:hover {
     <div class="card">
         <img src="https://via.placeholder.com/200">
         <h3>T-Shirt</h3>
-        <p class="price">₹599</p>
+        <p class="price">₹999</p>
         <button>Add to Cart</button>
     </div>
 
