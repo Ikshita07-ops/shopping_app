@@ -3,37 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shopping App</title>
+<title>QuickShop</title>
 
 <style>
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #f4f4f4;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f1f3f6;
 }
 
+/* Header */
 header {
-    background-color: #333;
+    background: #2874f0;
     color: white;
-    text-align: center;
     padding: 15px;
+    text-align: center;
 }
 
-.products {
+/* Search Bar */
+.search-box {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    flex-wrap: wrap;
+    margin: 20px;
 }
 
+.search-box input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* Product Grid */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Product Card */
 .card {
     background: white;
-    padding: 15px;
     border-radius: 10px;
+    padding: 15px;
     text-align: center;
-    width: 200px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 .card img {
@@ -41,18 +62,28 @@ header {
     border-radius: 10px;
 }
 
+.card h3 {
+    margin: 10px 0;
+}
+
+.price {
+    color: #e53935;
+    font-weight: bold;
+}
+
 button {
-    background: #28a745;
-    color: white;
+    background: #ff9f00;
     border: none;
     padding: 10px;
+    width: 100%;
     margin-top: 10px;
-    cursor: pointer;
     border-radius: 5px;
+    cursor: pointer;
+    color: white;
 }
 
 button:hover {
-    background: #218838;
+    background: #fb8c00;
 }
 </style>
 
@@ -60,28 +91,40 @@ button:hover {
 <body>
 
 <header>
-    <h1>My Shopping App</h1>
+    <h1>QuickShop</h1>
 </header>
+
+<div class="search-box">
+    <input type="text" placeholder="Search products...">
+</div>
 
 <section class="products">
 
     <div class="card">
-        <h2>Product 1</h2>
-        <p>499</p>
+        <img src="https://via.placeholder.com/200">
+        <h3>T-Shirt</h3>
+        <p class="price">₹599</p>
         <button>Add to Cart</button>
     </div>
 
     <div class="card">
-
-        <h2>Product 2</h2>
-        <p>799</p>
+        <img src="https://via.placeholder.com/200">
+        <h3>Smartphone</h3>
+        <p class="price">₹12,999</p>
         <button>Add to Cart</button>
     </div>
 
     <div class="card">
+        <img src="https://via.placeholder.com/200">
+        <h3>Laptop</h3>
+        <p class="price">₹45,000</p>
+        <button>Add to Cart</button>
+    </div>
 
-        <h2>Product 3</h2>
-        <p>999</p>
+    <div class="card">
+        <img src="https://via.placeholder.com/200">
+        <h3>Bluetooth Speaker</h3>
+        <p class="price">₹1,499</p>
         <button>Add to Cart</button>
     </div>
 
