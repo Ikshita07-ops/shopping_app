@@ -186,7 +186,7 @@ footer{
 </section>
 
 <footer>
-  <p>© 2026 Save Trees | Designed by You 🌿</p>
+  <p>© 2026 Save Trees | Designed by Neha Sri 🌿</p>
 </footer>
 
 </body>
