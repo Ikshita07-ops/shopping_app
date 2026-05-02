@@ -121,7 +121,7 @@ footer {
 </nav>
 
 <div class="container">
-    <h1>Our Products</h1>
+    <h1>Products</h1>
 
     <div class="products">
 
